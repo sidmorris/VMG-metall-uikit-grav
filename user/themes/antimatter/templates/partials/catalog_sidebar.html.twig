@@ -1,0 +1,15 @@
+{% set collection = page
+	.find( '/blog-iner-container' )
+	.children %}
+<nav class="sidebar-menu-custom">
+	{% for page in collection %}
+		{% set activepage = ( page.active )
+			? 'active'
+			: '' %}
+		{% if page.visible %}
+			<li class="nav-link {{ activepage }}">
+				<a href="{{ page.url }}">{{ page.title }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</nav>

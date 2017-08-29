@@ -1,5 +1,6 @@
 ---
-title: Каталог
+title: 'Каталог'
+redirect: '/catalog/product-1'
 ---
 
-Catalog Page
+Blog-Iner-container
