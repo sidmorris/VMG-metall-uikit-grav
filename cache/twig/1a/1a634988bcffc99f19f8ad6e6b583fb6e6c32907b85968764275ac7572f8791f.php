@@ -81,6 +81,6 @@ class __TwigTemplate_6224aa507285a828123b37628bc446832f45c698e8f2bfd98e79da42538
 
 {% include 'partials/javascripts-extra.html.twig' ignore missing %}
 {% endif %}
-", "partials/javascripts.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/javascripts.html.twig");
+", "partials/javascripts.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/javascripts.html.twig");
     }
 }

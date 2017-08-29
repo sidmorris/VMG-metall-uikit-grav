@@ -94,6 +94,6 @@ class __TwigTemplate_69c3e9518549b42c3c37a5232b458e0ec11b8102c73b536781279ef3dfd
     {% do assets.addCss(theme_url~'/css/nucleus-ie9.css') %}
     {% do assets.addCss(theme_url~'/css/pure-0.5.0/grids-min.css') %}
 {% endif %}
-", "partials/stylesheets.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/stylesheets.html.twig");
+", "partials/stylesheets.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/stylesheets.html.twig");
     }
 }

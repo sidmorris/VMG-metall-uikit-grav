@@ -70,6 +70,6 @@ class __TwigTemplate_e836b55d154eed9799c2add2deb8e73fd17788bfb3263a3f18e1c818321
     {% if field.disabled or isDisabledToggleable %}disabled=\"disabled\"{% endif %}
     name=\"{{ (scope ~ field.name)|fieldName }}\"
     value=\"{{ blueprints.name }}\" />
-", "forms/fields/blueprint/blueprint.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/forms/fields/blueprint/blueprint.html.twig");
+", "forms/fields/blueprint/blueprint.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/forms/fields/blueprint/blueprint.html.twig");
     }
 }

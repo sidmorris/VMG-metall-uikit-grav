@@ -49,6 +49,6 @@ class __TwigTemplate_54eac062d209077dfda250c97a5669b3ff857ed8cd80e52f1113fdd74a6
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'partials/base-root.html.twig' %}
-", "partials/base.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/base.html.twig");
+", "partials/base.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/base.html.twig");
     }
 }

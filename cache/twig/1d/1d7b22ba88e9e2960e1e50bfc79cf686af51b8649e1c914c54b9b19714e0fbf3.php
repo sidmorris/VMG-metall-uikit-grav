@@ -142,6 +142,6 @@ class __TwigTemplate_04765d0988f6ab97379957d0afadc718b9467505cb436cf801931076ab9
     {% endfor %}
     </ul>
 {% endif %}
-", "partials/nav-quick-tray.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/nav-quick-tray.html.twig");
+", "partials/nav-quick-tray.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/nav-quick-tray.html.twig");
     }
 }

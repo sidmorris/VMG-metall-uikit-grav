@@ -141,6 +141,6 @@ class __TwigTemplate_a47205fbb92f48636124c213994d0d80330d6f56a86afcc29496b3a98db
     {{ nonce_field('admin-form', 'admin-nonce')|raw }}
 
 </form>
-", "partials/blueprints-new-folder.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/blueprints-new-folder.html.twig");
+", "partials/blueprints-new-folder.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/blueprints-new-folder.html.twig");
     }
 }

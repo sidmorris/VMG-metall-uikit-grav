@@ -114,6 +114,6 @@ class __TwigTemplate_87e5644c9a97a87950c56fd1ea162b73f0a81eeae6433e2097afbf60d69
     {% set field = field|merge(defaults) %}
     {{ parent() }}
 {% endblock %}
-", "forms/fields/parents/parents.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/forms/fields/parents/parents.html.twig");
+", "forms/fields/parents/parents.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/forms/fields/parents/parents.html.twig");
     }
 }

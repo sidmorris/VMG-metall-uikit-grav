@@ -108,6 +108,6 @@ class __TwigTemplate_f69662bcfccca4d13783439108df4b62879c9965000eade3e31044166a5
         <div class=\"{{ message.scope|e }} alert\">{{ message.message|raw }}</div>
     {%- endfor -%}
 </div>
-", "partials/messages.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/messages.html.twig");
+", "partials/messages.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/messages.html.twig");
     }
 }

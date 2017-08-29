@@ -211,6 +211,6 @@ class __TwigTemplate_b0d9ecc66f5ae606617533d5f7028375f6f9dac88d94a3b9bcb828106a9
         </div>
     </div>
 {% endblock %}
-", "forms/fields/editor/editor.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/forms/fields/editor/editor.html.twig");
+", "forms/fields/editor/editor.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/forms/fields/editor/editor.html.twig");
     }
 }

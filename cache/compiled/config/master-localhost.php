@@ -1,77 +1,77 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1503851325,
-    'checksum' => 'c1ed60f32e0e78d6d9a0a1b17db13b64',
+    'timestamp' => 1504043282,
+    'checksum' => 'e0822508bd0e218d30dcbda4b218a1dd',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1503835129
+                'modified' => 1504034243
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1503835129
+                'modified' => 1504034243
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1503851277
+                'modified' => 1504034243
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1503835129
+                'modified' => 1504034243
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1503840726
+                'modified' => 1504043282
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034243
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034243
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034243
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034243
             ]
         ],
         'user/plugins' => [
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034244
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034244
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034244
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034244
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034243
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034244
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1502856490
+                'modified' => 1504034244
             ]
         ]
     ],

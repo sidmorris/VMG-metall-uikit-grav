@@ -66,6 +66,6 @@ class __TwigTemplate_8c2468b389a30242555e98e0613c61a69e34ac97750ff6bcad9758b20cf
     {% set codemirrorOptions = codemirrorOptions|merge({'ignore': []}) %}
 {% endif %}
 {# end backward compatibility #}
-", "forms/fields/markdown/markdown.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/forms/fields/markdown/markdown.html.twig");
+", "forms/fields/markdown/markdown.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/forms/fields/markdown/markdown.html.twig");
     }
 }

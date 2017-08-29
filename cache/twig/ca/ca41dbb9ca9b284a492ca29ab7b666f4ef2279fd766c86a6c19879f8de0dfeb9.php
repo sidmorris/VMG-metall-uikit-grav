@@ -1563,6 +1563,6 @@ $context["p"], "published", array())) ? (($this->env->getExtension('Grav\Plugin\
     \$('.admin-pages .form-tabs .tabs-nav').css('margin-right', (\$('#admin-topbar').width() + 20) + 'px');
 </script>
 {% endblock %}
-", "pages.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/pages.html.twig");
+", "pages.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/pages.html.twig");
     }
 }

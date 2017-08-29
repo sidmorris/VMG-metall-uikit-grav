@@ -56,6 +56,6 @@ class __TwigTemplate_cc3d593f532a7ddfcff684a988e9384c5dcdc2414e55281f95aa773a3ca
         return new Twig_Source("{% set value = (value is null ? (field.evaluate ? evaluate(field.default) : field.default) : value) %}
 
 <input data-grav-field=\"hidden\" data-grav-disabled=\"false\" type=\"hidden\" class=\"input\" name=\"{{ (scope ~ field.name)|fieldName }}\" value=\"{{ value|join(', ') }}\" />
-", "forms/fields/hidden/hidden.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/form/templates/forms/fields/hidden/hidden.html.twig");
+", "forms/fields/hidden/hidden.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/form/templates/forms/fields/hidden/hidden.html.twig");
     }
 }

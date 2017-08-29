@@ -160,6 +160,6 @@ class __TwigTemplate_0f07f03caefaf61ac7424b9ee0d7064288cf8e97da64324045b2e5792c2
     {% set field = field|merge({'wrapper_classes': 'form-input-addon-wrapper'}) %}
 {% endif %}
 {{ parent() }}
-{% endblock %}", "forms/fields/text/text.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/form/templates/forms/fields/text/text.html.twig");
+{% endblock %}", "forms/fields/text/text.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/form/templates/forms/fields/text/text.html.twig");
     }
 }

@@ -48,6 +48,6 @@ class __TwigTemplate_b39f8edd00aff33df71d40ceeccb450ef8f20842ff0d4d9c8f38261cf7d
     public function getSourceContext()
     {
         return new Twig_Source("<img src=\"{{ admin.user.avatarUrl() }}?s=47\" />
-", "partials/nav-user-avatar.html.twig", "/opt/lampp/htdocs/vmg-metall-grav-17/user/plugins/admin/themes/grav/templates/partials/nav-user-avatar.html.twig");
+", "partials/nav-user-avatar.html.twig", "/opt/lampp/htdocs/VMG-metall-uikit-grav/user/plugins/admin/themes/grav/templates/partials/nav-user-avatar.html.twig");
     }
 }
