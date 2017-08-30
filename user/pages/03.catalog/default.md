@@ -1,5 +1,5 @@
 ---
-title: 'Каталог Продукции'
+title: 'Каталог '
 redirect: catalog/mangaly
 routable: false
 ---

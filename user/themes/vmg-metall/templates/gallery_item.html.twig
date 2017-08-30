@@ -1,0 +1,47 @@
+{% embed 'default.html.twig' %}
+
+	{% set collection = page
+		.parent
+		.collection( ) %}
+
+	{% block content %}
+		<section class="s-gallery uk-section">
+			<div class="uk-container">
+				<div class="s-filter">
+					<div class="s-button-group uk-button-group">
+						{% for item in collection %}
+							{% set class_active = ( item.active or item.activeChild )
+								? 's-active'
+								: '' %}
+							{% if item.children.visible %}
+								<a class=" uk-button uk-button-primary {{class_active}}" href="{{ item.url }}">{{ item.title }}</a>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="uk-container">
+				<div class="grid" uk-lightbox="">
+					<div class="grid-sizer"></div>
+
+					{% for image in page.media.images %}
+						<div class="grid-item">
+							<div class="uk-inline uk-light uk-transition-toggle">
+								<a href="{{ image.url }}">{{ image }}
+									<div class="uk-transition-fade uk-overlay-primary uk-position-cover">
+										<div class="uk-position-center">
+											<span uk-overlay-icon=""></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</section>
+
+	{% endblock %}
+
+{% endembed %}

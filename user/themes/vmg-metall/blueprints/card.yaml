@@ -26,6 +26,11 @@ form:
               validate:
                 type: bool
 
+            header.title:
+              type: text
+              autofocus: true
+              label: Заголовок
+
             header.model:
               type: text
               label: Модель Товара
