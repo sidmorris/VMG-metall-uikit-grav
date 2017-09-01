@@ -1,13 +1,25 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1504111457,
-    'checksum' => '58e8c78f2f676bf2773e084b20c8ae33',
+    'timestamp' => 1504268580,
+    'checksum' => '867b6943ccf959be17bb57eddd770da5',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1504075730
+            ],
+            'plugins/breadcrumbs' => [
+                'file' => 'user/config/plugins/breadcrumbs.yaml',
+                'modified' => 1504258010
+            ],
+            'plugins/editable-simplemde' => [
+                'file' => 'user/config/plugins/editable-simplemde.yaml',
+                'modified' => 1504251990
+            ],
+            'plugins/login' => [
+                'file' => 'user/config/plugins/login.yaml',
+                'modified' => 1504249940
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -23,7 +35,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1504110123
+                'modified' => 1504268579
             ]
         ],
         'system/config' => [
@@ -49,6 +61,10 @@ return [
                 'file' => 'user/plugins/admin/admin.yaml',
                 'modified' => 1504075730
             ],
+            'plugins/breadcrumbs' => [
+                'file' => 'user/plugins/breadcrumbs/breadcrumbs.yaml',
+                'modified' => 1504254847
+            ],
             'plugins/editable-simplemde' => [
                 'file' => 'user/plugins/editable-simplemde/editable-simplemde.yaml',
                 'modified' => 1504111457
@@ -63,7 +79,7 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1504075731
+                'modified' => 1504178394
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
@@ -137,6 +153,15 @@ return [
                         'visitors' => 20
                     ]
                 ]
+            ],
+            'breadcrumbs' => [
+                'enabled' => false,
+                'show_all' => true,
+                'built_in_css' => true,
+                'include_home' => false,
+                'icon_home' => '',
+                'icon_divider_classes' => 'fa fa-angle-right',
+                'link_trailing' => false
             ],
             'editable-simplemde' => [
                 'enabled' => true
@@ -216,7 +241,7 @@ return [
                         'login_after_registration' => true,
                         'send_activation_email' => false,
                         'send_notification_email' => false,
-                        'send_welcome_email' => false
+                        'send_welcome_email' => '0'
                     ]
                 ],
                 'rememberme' => [

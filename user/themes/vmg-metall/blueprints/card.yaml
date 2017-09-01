@@ -15,14 +15,26 @@ form:
 
             header.published:
               type: toggle
-              toggleable: true
+              toggleable: 0
               label: PLUGIN_ADMIN.PUBLISHED
               help: PLUGIN_ADMIN.PUBLISHED_HELP
               highlight: 1
               size: medium
+              default: 0
               options:
                 1: PLUGIN_ADMIN.YES
                 0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            header.editable-simplemde.self:
+              type: toggle
+              label: 'Редактируемая'
+              default: 0
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
 

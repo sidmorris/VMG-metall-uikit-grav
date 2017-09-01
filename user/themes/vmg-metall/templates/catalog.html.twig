@@ -7,41 +7,9 @@
 			<div class="uk-container">
 				<div class="uk-grid-divider" uk-grid="">
 					<div class="s-catalog-content uk-width-4-5@l uk-width-3-4@m uk-width-2-3@s">
-						{% for item in collection %}
-							{% set catalog_image = item.media.images | first %}
-							<div class="s-card-product uk-card uk-card-hover uk-grid-collapse uk-margin-medium-bottom" uk-grid="" uk-lightbox="">
-								<div class="uk-width-1-1">
-									<div class="uk-padding-remove-bottom uk-card-header uk-grid-small" uk-grid="">
-										<div class="uk-width-1-2@s">
-											<h3 class="uk-card-title">{{item.header.model}}
-												<span class="uk-text-small">{{item.header.sub_model}}</span>
-											</h3>
-										</div>
-										<div class="uk-width-1-2@s">
-											{% if item.header.price %}
-												<span class="s-card-product-badge uk-badge">{{item.header.price}}</span>
-											{% endif %}
-										</div>
-									</div>
-									<hr class="uk-margin-small">
-								</div>
-								<div class="uk-card-media-left uk-margin-top uk-margin-bottom uk-width-1-2@m">
-									<div class="uk-inline uk-dark uk-transition-toggle">
-										<a href="{{catalog_image.url}}">{{catalog_image}}
-											<div class="uk-transition-fade uk-overlay-default uk-position-cover">
-												<div class="uk-position-center">
-													<span uk-overlay-icon=""></span>
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-								<div class="uk-width-1-2@m">
-									<div class="uk-card-body">
-										<p>{{ item.content }}</p>
-									</div>
-								</div>
-							</div>
+						{% for child in collection %}
+							{% include 'partials/catalog_card.html.twig' with { 'blog': page, 'page': child, 'truncate': true } %}
+
 						{% endfor %}
 
 					</div>
@@ -49,16 +17,16 @@
 						<ul class="uk-nav uk-nav-default">
 							<li class="uk-nav-header">Каталог</li>
 							<li class="uk-nav-divider"></li>
-							{% set sub_nav = page
+							{% set side_nav = page
 								.find( '/catalog' )
 								.children %}
-							{% for item in sub_nav %}
-								{% set current_page = ( item.active or item.activeChild )
+							{% for subnav in side_nav %}
+								{% set current_page = ( subnav.active )
 									? 'uk-active'
 									: '' %}
-								{% if item.children.visible %}
+								{% if subnav.published == 1 %}
 									<li class="{{current_page}}">
-										<a href="{{ item.url }}">{{ item.title }}</a>
+										<a href="{{ subnav.url }}">{{ subnav.title }}</a>
 									</li>
 								{% endif %}
 							{% endfor %}

@@ -1,7 +1,6 @@
 ---
-title: Мангалы
 published: true
-routable: true
+title: Мангалы
 content:
     items: '@self.children'
     limit: 5
@@ -10,5 +9,8 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+routable: true
+editable-simplemde:
+    self: true
 ---
 

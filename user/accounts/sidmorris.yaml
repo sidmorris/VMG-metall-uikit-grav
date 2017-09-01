@@ -9,5 +9,6 @@ access:
     pages: 'true'
   site:
     login: 'true'
+    editable: 'true'
 hashed_password: $2y$10$r53Per85E5KLliekYpNUM.KqO4Y40VDrFW.d.VpyKgyQxBH9YaKQe
 language: ru

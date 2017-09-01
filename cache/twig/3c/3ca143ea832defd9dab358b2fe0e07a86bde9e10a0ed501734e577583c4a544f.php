@@ -93,10 +93,24 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"uk-navbar-right\">
+\t\t\t\t\t\t\t<div class=\"uk-navbar-item\">
+\t\t\t\t\t\t\t\t";
+        // line 68
+        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "login", array()), "enabled", array()) && $this->getAttribute($this->getAttribute((isset($context["grav"]) ? $context["grav"] : null), "user", array()), "username", array()))) {
+            // line 69
+            echo "\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t";
+            // line 70
+            $this->loadTemplate("partials/login-status.html.twig", "partials/base.html.twig", 70)->display($context);
+            echo "</li>
+\t\t\t\t\t\t\t\t";
+        }
+        // line 72
+        echo "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"uk-navbar-item uk-visible@m\">
 \t\t\t\t\t\t\t\t<span uk-icon=\"icon: phone\"></span>
 \t\t\t\t\t\t\t\t<p class=\"s_phone-top\">";
-        // line 69
+        // line 75
         echo $this->getAttribute((isset($context["site"]) ? $context["site"] : null), "s_phone", array());
         echo "</p>
 \t\t\t\t\t\t\t</div>
@@ -108,14 +122,14 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t</div>
 
 \t\t\t";
-        // line 78
+        // line 84
         $this->displayBlock('header', $context, $blocks);
-        // line 79
+        // line 85
         echo "
 \t\t\t";
-        // line 80
+        // line 86
         $this->displayBlock('content', $context, $blocks);
-        // line 83
+        // line 89
         echo "
 \t\t\t<footer class=\"s-footer uk-section uk-section-secondary\">
 \t\t\t\t<div class=\"uk-container\">
@@ -128,7 +142,7 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"s-footer-contact-item uk-width-expand\">
 \t\t\t\t\t\t\t\t<p>";
-        // line 94
+        // line 100
         echo $this->getAttribute((isset($context["site"]) ? $context["site"] : null), "s_phone", array());
         echo "</p>
 \t\t\t\t\t\t\t</div>
@@ -140,7 +154,7 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"s-footer-contact-item uk-width-expand\">
 \t\t\t\t\t\t\t\t<p>";
-        // line 103
+        // line 109
         echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "email", array());
         echo "</p>
 \t\t\t\t\t\t\t</div>
@@ -153,7 +167,7 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"s-footer-contact-item uk-width-expand\">
 \t\t\t\t\t\t\t\t<p>";
-        // line 113
+        // line 119
         echo $this->getAttribute((isset($context["site"]) ? $context["site"] : null), "s_address", array());
         echo "</p>
 \t\t\t\t\t\t\t</div>
@@ -163,14 +177,14 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t<div class=\"s-menu-footer\">
 \t\t\t\t\t\t<div class=\"s-menu-footer-continer uk-flex-center uk-child-width-auto\" uk-grid=\"\">
 \t\t\t\t\t\t\t";
-        // line 120
+        // line 126
         $context["sub_nav"] = $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "find", array(0 => "/catalog"), "method"), "children", array());
-        // line 123
+        // line 129
         echo "\t\t\t\t\t\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["sub_nav"]) ? $context["sub_nav"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 124
+            // line 130
             echo "\t\t\t\t\t\t\t\t<a href=\"";
             echo $this->getAttribute($context["item"], "url", array());
             echo "\">";
@@ -181,7 +195,7 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 126
+        // line 132
         echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -193,39 +207,61 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t<ul class=\"uk-nav uk-nav-default\">
 
 \t\t\t\t\t\t";
-        // line 136
+        // line 142
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["pages"]) ? $context["pages"] : null), "children", array()), "visible", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-            // line 137
+            // line 143
             echo "\t\t\t\t\t\t\t";
             $context["current_page"] = ((($this->getAttribute($context["page"], "active", array()) || $this->getAttribute($context["page"], "activeChild", array()))) ? ("uk-active") : (""));
-            // line 140
-            echo "\t\t\t\t\t\t\t<li class=\"";
+            // line 146
+            echo "\t\t\t\t\t\t<li class=\"";
             echo (isset($context["current_page"]) ? $context["current_page"] : null);
             echo "\">
-\t\t\t\t\t\t\t\t<a href=\"";
-            // line 141
+\t\t\t\t\t\t\t<a href=\"";
+            // line 147
             echo $this->getAttribute($context["page"], "url", array());
             echo "\">
-\t\t\t\t\t\t\t\t\t";
-            // line 142
+\t\t\t\t\t\t\t\t";
+            // line 148
             echo $this->getAttribute($context["page"], "menu", array());
             echo "
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t";
+            // line 149
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($context["page"], "children", array()), "visible", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["sub_page"]) {
+                // line 150
+                echo "\t\t\t\t\t\t\t\t\t<ul class=\"uk-nav-sub\">
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+                // line 152
+                echo $this->getAttribute($context["sub_page"], "url", array());
+                echo "\">";
+                echo $this->getAttribute($context["sub_page"], "title", array());
+                echo "</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['sub_page'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 156
+            echo "\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 146
+        // line 159
         echo "
-\t\t\t\t\t</ul>
-\t\t\t\t</div>
+\t\t\t\t</ul>
 \t\t\t</div>
 \t\t</div>
-\t</body>
+\t</div>
+</body>
 </html>
 ";
     }
@@ -317,15 +353,15 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
         echo "\t\t\t";
     }
 
-    // line 78
+    // line 84
     public function block_header($context, array $blocks = array())
     {
     }
 
-    // line 80
+    // line 86
     public function block_content($context, array $blocks = array())
     {
-        // line 81
+        // line 87
         echo "\t\t\t\t";
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
@@ -344,7 +380,7 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 
     public function getDebugInfo()
     {
-        return array (  329 => 81,  326 => 80,  321 => 78,  317 => 31,  315 => 30,  313 => 29,  310 => 28,  306 => 26,  304 => 25,  302 => 24,  300 => 23,  298 => 22,  295 => 21,  288 => 32,  286 => 28,  281 => 27,  279 => 21,  275 => 20,  271 => 19,  267 => 18,  263 => 17,  259 => 16,  254 => 13,  252 => 12,  248 => 11,  241 => 9,  237 => 7,  234 => 6,  223 => 146,  213 => 142,  209 => 141,  204 => 140,  201 => 137,  197 => 136,  185 => 126,  174 => 124,  169 => 123,  167 => 120,  157 => 113,  144 => 103,  132 => 94,  119 => 83,  117 => 80,  114 => 79,  112 => 78,  100 => 69,  92 => 63,  82 => 59,  78 => 58,  73 => 57,  70 => 54,  66 => 53,  59 => 49,  48 => 43,  38 => 36,  34 => 34,  32 => 6,  26 => 2,  24 => 1,);
+        return array (  365 => 87,  362 => 86,  357 => 84,  353 => 31,  351 => 30,  349 => 29,  346 => 28,  342 => 26,  340 => 25,  338 => 24,  336 => 23,  334 => 22,  331 => 21,  324 => 32,  322 => 28,  317 => 27,  315 => 21,  311 => 20,  307 => 19,  303 => 18,  299 => 17,  295 => 16,  290 => 13,  288 => 12,  284 => 11,  277 => 9,  273 => 7,  270 => 6,  259 => 159,  251 => 156,  239 => 152,  235 => 150,  231 => 149,  227 => 148,  223 => 147,  218 => 146,  215 => 143,  211 => 142,  199 => 132,  188 => 130,  183 => 129,  181 => 126,  171 => 119,  158 => 109,  146 => 100,  133 => 89,  131 => 86,  128 => 85,  126 => 84,  114 => 75,  109 => 72,  104 => 70,  101 => 69,  99 => 68,  92 => 63,  82 => 59,  78 => 58,  73 => 57,  70 => 54,  66 => 53,  59 => 49,  48 => 43,  38 => 36,  34 => 34,  32 => 6,  26 => 2,  24 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -423,6 +459,12 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"uk-navbar-right\">
+\t\t\t\t\t\t\t<div class=\"uk-navbar-item\">
+\t\t\t\t\t\t\t\t{% if config.plugins.login.enabled and grav.user.username %}
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t{% include 'partials/login-status.html.twig' %}</li>
+\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"uk-navbar-item uk-visible@m\">
 \t\t\t\t\t\t\t\t<span uk-icon=\"icon: phone\"></span>
 \t\t\t\t\t\t\t\t<p class=\"s_phone-top\">{{ site.s_phone }}</p>
@@ -496,18 +538,25 @@ class __TwigTemplate_829d08834ab1c85f45f1fcdec723f7576b29ae5a943dfd90cb1d0a19582
 \t\t\t\t\t\t\t{% set current_page = ( page.active or page.activeChild )
 \t\t\t\t\t\t\t\t? 'uk-active'
 \t\t\t\t\t\t\t\t: '' %}
-\t\t\t\t\t\t\t<li class=\"{{ current_page }}\">
-\t\t\t\t\t\t\t\t<a href=\"{{ page.url }}\">
-\t\t\t\t\t\t\t\t\t{{ page.menu }}
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t<li class=\"{{ current_page }}\">
+\t\t\t\t\t\t\t<a href=\"{{ page.url }}\">
+\t\t\t\t\t\t\t\t{{ page.menu }}
+\t\t\t\t\t\t\t\t{% for sub_page in page.children.visible %}
+\t\t\t\t\t\t\t\t\t<ul class=\"uk-nav-sub\">
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{sub_page.url}}\">{{sub_page.title}}</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t{% endfor %}
 
-\t\t\t\t\t</ul>
-\t\t\t\t</div>
+\t\t\t\t</ul>
 \t\t\t</div>
 \t\t</div>
-\t</body>
+\t</div>
+</body>
 </html>
 ", "partials/base.html.twig", "P:\\OpenServer\\domains\\VMG-metall-uikit-grav\\user\\themes\\vmg-metall\\templates\\partials\\base.html.twig");
     }

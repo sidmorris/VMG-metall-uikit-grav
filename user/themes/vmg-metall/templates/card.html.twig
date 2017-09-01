@@ -1,1 +1,12 @@
-<!-- не удалять, шаблон для блюпринта из-под админки -->
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+		{% if config.plugins.breadcrumbs.enabled %}
+			{% include 'partials/breadcrumbs.html.twig' %}
+		{% endif %}
+
+		{% include 'partials/catalog_card.html.twig' with { 'blog': page.parent, 'truncate': false, } %}
+
+	{% endblock %}
+
+{% endembed %}

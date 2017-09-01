@@ -50,6 +50,11 @@ class __TwigTemplate_0c14805cc860ddd013040a707f7616cd690e6d15e8a51859c748ae4824b
     // line 13
     public function block_content($context, array $blocks = array())
     {
+        // line 14
+        echo "\t";
+        echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
+        echo "
+";
     }
 
     public function getTemplateName()
@@ -64,7 +69,7 @@ class __TwigTemplate_0c14805cc860ddd013040a707f7616cd690e6d15e8a51859c748ae4824b
 
     public function getDebugInfo()
     {
-        return array (  51 => 13,  42 => 8,  36 => 5,  32 => 3,  29 => 2,  11 => 1,);
+        return array (  54 => 14,  51 => 13,  42 => 8,  36 => 5,  32 => 3,  29 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -89,7 +94,9 @@ class __TwigTemplate_0c14805cc860ddd013040a707f7616cd690e6d15e8a51859c748ae4824b
 \t\t</div>
 \t</div>
 {% endblock %}
-{% block content %}{% endblock %}
+{% block content %}
+\t{{page.content}}
+{% endblock %}
 ", "default.html.twig", "P:\\OpenServer\\domains\\VMG-metall-uikit-grav\\user\\themes\\vmg-metall\\templates\\default.html.twig");
     }
 }

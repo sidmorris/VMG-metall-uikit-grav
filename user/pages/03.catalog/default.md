@@ -1,6 +1,6 @@
 ---
 title: 'Каталог '
 redirect: catalog/mangaly
-routable: false
+routable: true
 ---
 

@@ -6,7 +6,7 @@ promo:
         link: /catalog/mangaly
     -
         text: 'Летние беседки для отдыха.'
-        link: /catalog/mangaly-2
+        link: /catalog/navesy
 product:
     -
         text: Мангалы

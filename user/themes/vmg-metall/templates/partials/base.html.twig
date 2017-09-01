@@ -64,6 +64,12 @@
 							</div>
 						</div>
 						<div class="uk-navbar-right">
+							<div class="uk-navbar-item">
+								{% if config.plugins.login.enabled and grav.user.username %}
+									<li>
+										{% include 'partials/login-status.html.twig' %}</li>
+								{% endif %}
+							</div>
 							<div class="uk-navbar-item uk-visible@m">
 								<span uk-icon="icon: phone"></span>
 								<p class="s_phone-top">{{ site.s_phone }}</p>
@@ -137,16 +143,23 @@
 							{% set current_page = ( page.active or page.activeChild )
 								? 'uk-active'
 								: '' %}
-							<li class="{{ current_page }}">
-								<a href="{{ page.url }}">
-									{{ page.menu }}
-								</a>
-							</li>
-						{% endfor %}
+						<li class="{{ current_page }}">
+							<a href="{{ page.url }}">
+								{{ page.menu }}
+								{% for sub_page in page.children.visible %}
+									<ul class="uk-nav-sub">
+										<li>
+											<a href="{{sub_page.url}}">{{sub_page.title}}</a>
+										</li>
+									</ul>
+								{% endfor %}
+							</a>
+						</li>
+					{% endfor %}
 
-					</ul>
-				</div>
+				</ul>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
 </html>

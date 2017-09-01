@@ -1,0 +1,14 @@
+email: ivan160881@mail.ru
+fullname: Ivan
+title: user
+state: enabled
+access:
+  admin:
+    login: 'true'
+    pages: 'true'
+  site:
+    login: 'true'
+    editable: 'true'
+language: ru
+authenticated: true
+hashed_password: $2y$10$LEMEHOekiG7IxgE/I7LqeuNKuPB7qNGNzOf4fb/lKEJY.oj1n8dMy

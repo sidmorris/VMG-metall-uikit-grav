@@ -16,7 +16,7 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("catalog.html.twig", "catalog.html.twig", 1, "1544321723")->display($context);
+        $this->loadTemplate("catalog.html.twig", "catalog.html.twig", 1, "453856357")->display($context);
     }
 
     public function getTemplateName()
@@ -48,41 +48,9 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 \t\t\t<div class=\"uk-container\">
 \t\t\t\t<div class=\"uk-grid-divider\" uk-grid=\"\">
 \t\t\t\t\t<div class=\"s-catalog-content uk-width-4-5@l uk-width-3-4@m uk-width-2-3@s\">
-\t\t\t\t\t\t{% for item in collection %}
-\t\t\t\t\t\t\t{% set catalog_image = item.media.images | first %}
-\t\t\t\t\t\t\t<div class=\"s-card-product uk-card uk-card-hover uk-grid-collapse uk-margin-medium-bottom\" uk-grid=\"\" uk-lightbox=\"\">
-\t\t\t\t\t\t\t\t<div class=\"uk-width-1-1\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-padding-remove-bottom uk-card-header uk-grid-small\" uk-grid=\"\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@s\">
-\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"uk-card-title\">{{item.header.model}}
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"uk-text-small\">{{item.header.sub_model}}</span>
-\t\t\t\t\t\t\t\t\t\t\t</h3>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@s\">
-\t\t\t\t\t\t\t\t\t\t\t{% if item.header.price %}
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"s-card-product-badge uk-badge\">{{item.header.price}}</span>
-\t\t\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<hr class=\"uk-margin-small\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"uk-card-media-left uk-margin-top uk-margin-bottom uk-width-1-2@m\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-inline uk-dark uk-transition-toggle\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{catalog_image.url}}\">{{catalog_image}}
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"uk-transition-fade uk-overlay-default uk-position-cover\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"uk-position-center\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<span uk-overlay-icon=\"\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@m\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-card-body\">
-\t\t\t\t\t\t\t\t\t\t<p>{{ item.content }}</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% for child in collection %}
+\t\t\t\t\t\t\t{% include 'partials/catalog_card.html.twig' with { 'blog': page, 'page': child, 'truncate': true } %}
+
 \t\t\t\t\t\t{% endfor %}
 
 \t\t\t\t\t</div>
@@ -90,16 +58,16 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 \t\t\t\t\t\t<ul class=\"uk-nav uk-nav-default\">
 \t\t\t\t\t\t\t<li class=\"uk-nav-header\">Каталог</li>
 \t\t\t\t\t\t\t<li class=\"uk-nav-divider\"></li>
-\t\t\t\t\t\t\t{% set sub_nav = page
+\t\t\t\t\t\t\t{% set side_nav = page
 \t\t\t\t\t\t\t\t.find( '/catalog' )
 \t\t\t\t\t\t\t\t.children %}
-\t\t\t\t\t\t\t{% for item in sub_nav %}
-\t\t\t\t\t\t\t\t{% set current_page = ( item.active or item.activeChild )
+\t\t\t\t\t\t\t{% for subnav in side_nav %}
+\t\t\t\t\t\t\t\t{% set current_page = ( subnav.active )
 \t\t\t\t\t\t\t\t\t? 'uk-active'
 \t\t\t\t\t\t\t\t\t: '' %}
-\t\t\t\t\t\t\t\t{% if item.children.visible %}
+\t\t\t\t\t\t\t\t{% if subnav.published == 1 %}
 \t\t\t\t\t\t\t\t\t<li class=\"{{current_page}}\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{ item.url }}\">{{ item.title }}</a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{ subnav.url }}\">{{ subnav.title }}</a>
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t{% endfor %}
@@ -118,7 +86,7 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 
 
 /* catalog.html.twig */
-class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b2f7de_1544321723 extends Twig_Template
+class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b2f7de_453856357 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -155,71 +123,39 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
         // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+        $context['loop'] = array(
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        );
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
             // line 11
             echo "\t\t\t\t\t\t\t";
-            $context["catalog_image"] = twig_first($this->env, $this->getAttribute($this->getAttribute($context["item"], "media", array()), "images", array()));
+            $this->loadTemplate("partials/catalog_card.html.twig", "catalog.html.twig", 11)->display(array_merge($context, array("blog" => (isset($context["page"]) ? $context["page"] : null), "page" => $context["child"], "truncate" => true)));
             // line 12
-            echo "\t\t\t\t\t\t\t<div class=\"s-card-product uk-card uk-card-hover uk-grid-collapse uk-margin-medium-bottom\" uk-grid=\"\" uk-lightbox=\"\">
-\t\t\t\t\t\t\t\t<div class=\"uk-width-1-1\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-padding-remove-bottom uk-card-header uk-grid-small\" uk-grid=\"\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@s\">
-\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"uk-card-title\">";
-            // line 16
-            echo $this->getAttribute($this->getAttribute($context["item"], "header", array()), "model", array());
             echo "
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"uk-text-small\">";
-            // line 17
-            echo $this->getAttribute($this->getAttribute($context["item"], "header", array()), "sub_model", array());
-            echo "</span>
-\t\t\t\t\t\t\t\t\t\t\t</h3>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@s\">
-\t\t\t\t\t\t\t\t\t\t\t";
-            // line 21
-            if ($this->getAttribute($this->getAttribute($context["item"], "header", array()), "price", array())) {
-                // line 22
-                echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"s-card-product-badge uk-badge\">";
-                echo $this->getAttribute($this->getAttribute($context["item"], "header", array()), "price", array());
-                echo "</span>
-\t\t\t\t\t\t\t\t\t\t\t";
-            }
-            // line 24
-            echo "\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<hr class=\"uk-margin-small\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"uk-card-media-left uk-margin-top uk-margin-bottom uk-width-1-2@m\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-inline uk-dark uk-transition-toggle\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 30
-            echo $this->getAttribute((isset($context["catalog_image"]) ? $context["catalog_image"] : null), "url", array());
-            echo "\">";
-            echo (isset($context["catalog_image"]) ? $context["catalog_image"] : null);
-            echo "
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"uk-transition-fade uk-overlay-default uk-position-cover\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"uk-position-center\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<span uk-overlay-icon=\"\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@m\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-card-body\">
-\t\t\t\t\t\t\t\t\t\t<p>";
-            // line 41
-            echo $this->getAttribute($context["item"], "content", array());
-            echo "</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 14
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"s-sidedar uk-width-1-5@l uk-width-1-4@m uk-width-1-3@s uk-visible@s\">
@@ -227,39 +163,39 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 \t\t\t\t\t\t\t<li class=\"uk-nav-header\">Каталог</li>
 \t\t\t\t\t\t\t<li class=\"uk-nav-divider\"></li>
 \t\t\t\t\t\t\t";
-        // line 52
-        $context["sub_nav"] = $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "find", array(0 => "/catalog"), "method"), "children", array());
-        // line 55
+        // line 20
+        $context["side_nav"] = $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "find", array(0 => "/catalog"), "method"), "children", array());
+        // line 23
         echo "\t\t\t\t\t\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["sub_nav"]) ? $context["sub_nav"] : null));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 56
+        $context['_seq'] = twig_ensure_traversable((isset($context["side_nav"]) ? $context["side_nav"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["subnav"]) {
+            // line 24
             echo "\t\t\t\t\t\t\t\t";
-            $context["current_page"] = ((($this->getAttribute($context["item"], "active", array()) || $this->getAttribute($context["item"], "activeChild", array()))) ? ("uk-active") : (""));
-            // line 59
+            $context["current_page"] = (($this->getAttribute($context["subnav"], "active", array())) ? ("uk-active") : (""));
+            // line 27
             echo "\t\t\t\t\t\t\t\t";
-            if ($this->getAttribute($this->getAttribute($context["item"], "children", array()), "visible", array())) {
-                // line 60
+            if (($this->getAttribute($context["subnav"], "published", array()) == 1)) {
+                // line 28
                 echo "\t\t\t\t\t\t\t\t\t<li class=\"";
                 echo (isset($context["current_page"]) ? $context["current_page"] : null);
                 echo "\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-                // line 61
-                echo $this->getAttribute($context["item"], "url", array());
+                // line 29
+                echo $this->getAttribute($context["subnav"], "url", array());
                 echo "\">";
-                echo $this->getAttribute($context["item"], "title", array());
+                echo $this->getAttribute($context["subnav"], "title", array());
                 echo "</a>
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t";
             }
-            // line 64
+            // line 32
             echo "\t\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['subnav'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 33
         echo "\t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -281,7 +217,7 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 
     public function getDebugInfo()
     {
-        return array (  263 => 65,  257 => 64,  249 => 61,  244 => 60,  241 => 59,  238 => 56,  233 => 55,  231 => 52,  223 => 46,  212 => 41,  196 => 30,  188 => 24,  182 => 22,  180 => 21,  173 => 17,  169 => 16,  163 => 12,  160 => 11,  156 => 10,  150 => 6,  147 => 5,  143 => 1,  141 => 3,  19 => 1,);
+        return array (  199 => 33,  193 => 32,  185 => 29,  180 => 28,  177 => 27,  174 => 24,  169 => 23,  167 => 20,  159 => 14,  144 => 12,  141 => 11,  124 => 10,  118 => 6,  115 => 5,  111 => 1,  109 => 3,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -303,41 +239,9 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 \t\t\t<div class=\"uk-container\">
 \t\t\t\t<div class=\"uk-grid-divider\" uk-grid=\"\">
 \t\t\t\t\t<div class=\"s-catalog-content uk-width-4-5@l uk-width-3-4@m uk-width-2-3@s\">
-\t\t\t\t\t\t{% for item in collection %}
-\t\t\t\t\t\t\t{% set catalog_image = item.media.images | first %}
-\t\t\t\t\t\t\t<div class=\"s-card-product uk-card uk-card-hover uk-grid-collapse uk-margin-medium-bottom\" uk-grid=\"\" uk-lightbox=\"\">
-\t\t\t\t\t\t\t\t<div class=\"uk-width-1-1\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-padding-remove-bottom uk-card-header uk-grid-small\" uk-grid=\"\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@s\">
-\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"uk-card-title\">{{item.header.model}}
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"uk-text-small\">{{item.header.sub_model}}</span>
-\t\t\t\t\t\t\t\t\t\t\t</h3>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@s\">
-\t\t\t\t\t\t\t\t\t\t\t{% if item.header.price %}
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"s-card-product-badge uk-badge\">{{item.header.price}}</span>
-\t\t\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<hr class=\"uk-margin-small\">
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"uk-card-media-left uk-margin-top uk-margin-bottom uk-width-1-2@m\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-inline uk-dark uk-transition-toggle\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{catalog_image.url}}\">{{catalog_image}}
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"uk-transition-fade uk-overlay-default uk-position-cover\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"uk-position-center\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<span uk-overlay-icon=\"\"></span>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class=\"uk-width-1-2@m\">
-\t\t\t\t\t\t\t\t\t<div class=\"uk-card-body\">
-\t\t\t\t\t\t\t\t\t\t<p>{{ item.content }}</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% for child in collection %}
+\t\t\t\t\t\t\t{% include 'partials/catalog_card.html.twig' with { 'blog': page, 'page': child, 'truncate': true } %}
+
 \t\t\t\t\t\t{% endfor %}
 
 \t\t\t\t\t</div>
@@ -345,16 +249,16 @@ class __TwigTemplate_95afa3cc082a045dafc731b41f6dc5117f5e0146160308228aa0fd16b4b
 \t\t\t\t\t\t<ul class=\"uk-nav uk-nav-default\">
 \t\t\t\t\t\t\t<li class=\"uk-nav-header\">Каталог</li>
 \t\t\t\t\t\t\t<li class=\"uk-nav-divider\"></li>
-\t\t\t\t\t\t\t{% set sub_nav = page
+\t\t\t\t\t\t\t{% set side_nav = page
 \t\t\t\t\t\t\t\t.find( '/catalog' )
 \t\t\t\t\t\t\t\t.children %}
-\t\t\t\t\t\t\t{% for item in sub_nav %}
-\t\t\t\t\t\t\t\t{% set current_page = ( item.active or item.activeChild )
+\t\t\t\t\t\t\t{% for subnav in side_nav %}
+\t\t\t\t\t\t\t\t{% set current_page = ( subnav.active )
 \t\t\t\t\t\t\t\t\t? 'uk-active'
 \t\t\t\t\t\t\t\t\t: '' %}
-\t\t\t\t\t\t\t\t{% if item.children.visible %}
+\t\t\t\t\t\t\t\t{% if subnav.published == 1 %}
 \t\t\t\t\t\t\t\t\t<li class=\"{{current_page}}\">
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{ item.url }}\">{{ item.title }}</a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{ subnav.url }}\">{{ subnav.title }}</a>
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t{% endfor %}
